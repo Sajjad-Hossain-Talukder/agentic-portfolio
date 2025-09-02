@@ -1,0 +1,203 @@
+{
+  "name": "Sajjad Hossain Talukder",
+  "title": "Software Engineer",
+  "contact": {
+    "email": "sajjadhossain.cse35@gmail.com",
+    "phone": "+8801871156068",
+    "linkedin": "https://www.linkedin.com/in/sajjad-hossain-talukder/",
+    "github": "https://github.com/Sajjad-Hossain-Talukder"
+  },
+  "education": [
+    {
+      "degree": "BSc in Computer Science & Engineering",
+      "institution": "Premier University",
+      "location": "Chittagong, Bangladesh",
+      "period": "Jan. 2019 – Dec 2024"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "Silicon Orchard Ltd.",
+      "location": "Dhaka, Bangladesh",
+      "period": "Sep. 2024 - Present",
+      "responsibilities": [
+        "Develop and maintain iOS (Swift) and cross-platform (React Native) applications with focus on performance and usability.",
+        "Collaborate with backend teams to integrate APIs, optimize performance, and implement seamless UI/UX designs.",
+        "Debug, test, and deploy applications ensuring best practices."
+      ]
+    },
+    {
+      "role": "Software Engineer (iOS)",
+      "company": "Xotech",
+      "location": "Chittagong, Bangladesh",
+      "period": "Mar. 2024 - Sep. 2024",
+      "responsibilities": [
+        "Developed AI-based iOS applications in collaboration with UI/UX team.",
+        "Built backend services using PHP (Laravel) and APIs for mobile apps.",
+        "Led full app lifecycle from development to App Store deployment.",
+        "Optimized performance and implemented AI-driven features."
+      ]
+    },
+    {
+      "role": "Intern",
+      "company": "Xotech",
+      "location": "Chittagong, Bangladesh",
+      "period": "Dec. 2023 - Mar. 2024",
+      "responsibilities": [
+        "Hands-on iOS development with Swift and Xcode focusing on clean architecture.",
+        "Collaborated with UI/UX team to enhance user experience."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AI Video Translator - DUB it!",
+      "link": "https://apps.apple.com/app/id6498151077",
+      "tech": ["Swift", "UIKit", "AVFoundation", "Realm", "RevenueCat"],
+      "description": "AI-powered dubbing app that translates videos with lip-synced speech."
+    },
+    {
+      "name": "VIDU—AI Video Maker",
+      "link": "https://apps.apple.com/app/id6478830556",
+      "tech": ["Swift", "UIKit", "AVFoundation", "Realm", "RevenueCat"],
+      "description": "iOS app that creates videos from text and images using AI."
+    },
+    {
+      "name": "AIArt : AI Image Art Generator",
+      "link": "https://apps.apple.com/app/id6444312816",
+      "tech": ["Swift", "UIKit", "AdMob", "Lottie", "Realm", "RevenueCat"],
+      "description": "iOS app that generates and enhances digital artwork with AI."
+    },
+    {
+      "name": "SmartWeight : Digital Weight Machine with Object Detection",
+      "link": "https://github.com/Sajjad-Hossain-Talukder/SmartWeight-RaspberryPi-HX711-based-Digital-Weight-Machine-with-Object-Detection",
+      "tech": ["Raspberry Pi", "Python", "OpenCV", "MySQL", "PHP-Laravel"],
+      "description": "Intelligent weighing system with object detection and invoice generation."
+    },
+    {
+      "name": "University Academic Information System (UAIS)",
+      "link": "https://github.com/Sajjad-Hossain-Talukder/PUAIS-Enrollment-Section",
+      "tech": ["PHP-Laravel", "MySQL"],
+      "description": "Full-stack system for managing student records, course enrollments, and faculty data."
+    },
+    {
+      "name": "Automated Attendance Management",
+      "tech": ["Python", "OpenCV", "CNN"],
+      "description": "Facial recognition-based attendance system with real-time logging."
+    }
+  ],
+  "skills": {
+    "languages_frameworks": [
+      "Swift",
+      "SwiftUI",
+      "Javascript",
+      "React Native",
+      "Python",
+      "C",
+      "C++",
+      "PHP-Laravel",
+      "SQL (MySQL)",
+      "HTML/CSS",
+      "OpenCV",
+      "NumPy"
+    ],
+    "tools": [
+      "AWS",
+      "Git",
+      "GitHub",
+      "Bitbucket",
+      "PostMan",
+      "Cursor",
+      "VSCode",
+      "XCode",
+      "Figma"
+    ],
+    "interests": [
+      "Competitive programming",
+      "iOS",
+      "AI/ML/DL",
+      "Blockchain",
+      "Web 3.0",
+      "XR/AR/VR technology",
+      "Quantum Computing"
+    ]
+  },
+  "online_judges": {
+    "codeforces": {
+      "handle": "SajjadHuseyn",
+      "profile": "https://codeforces.com/profile/SajjadHuseyn",
+      "max_rating": 1417,
+      "status": "Specialist",
+      "problems_solved": 1000
+    },
+    "codechef": {
+      "handle": "sajjadhuseyn_t",
+      "profile": "https://www.codechef.com/users/sajjadhuseyn_t",
+      "max_rating": 1721,
+      "status": "3 star"
+    },
+    "leetcode": {
+      "handle": "Sajjad Hossain Talukder",
+      "profile": "https://leetcode.com/sajjadhuseyn/"
+    },
+    "lightoj": {
+      "handle": "Sajjad Hossain Talukder",
+      "profile": "https://lightoj.com/user/sajjadhuseyn"
+    },
+    "toph": {
+      "handle": "SajjadHT",
+      "profile": "https://toph.co/u/SajjadHT"
+    }
+  },
+  "achievements": {
+    "icpc_ncpc": [
+      "ICPC Asia West Championship 2022 Finalist (Team - PUC Eternals)",
+      "52nd in ICPC Dhaka Regional 2022 Main Round (PUC Eternals)",
+      "78th in ICPC Dhaka Regional 2023 Main Round (PUC Eternals)",
+      "76th in ICPC Dhaka Regional Online Preliminary 2023 (PUC Eternals)",
+      "84th in ICPC Dhaka Regional Online Preliminary 2022 (PUC Eternals)",
+      "93rd in ICPC Dhaka Regional 2021 Main Round (PUC Eternals)",
+      "106th in ICPC Dhaka Regional Online Preliminary 2021 (PUC Eternals)",
+      "141st in MIST NCPC 2020 (PUC Noob Coders)"
+    ],
+    "iupc": [
+      "Participated in BUET IUPC, CUET IUPC representing PUC Eternals and PUC Gryffindor's."
+    ],
+    "scholarship": [
+      "Recipient of Merit-Based Scholarship at Premier University"
+    ]
+  },
+  "publication": {
+    "title": "Empowering Bengali Language in Drone Control with Artificial Neural Networks",
+    "conference": "11th International Conference on Informatics, Electronics & Vision (ICIEV) & 6th International Conference on Imaging, Vision & Pattern Recognition (IVPR)"
+  },
+  "organizations": [
+    { "name": "IEEE", "role": "Member", "period": "Jan 2023 – Dec 2023" },
+    {
+      "name": "PUC CSE Club",
+      "role": "CP Trainer and Manager",
+      "period": "Jan 2021 – Dec 2023"
+    },
+    {
+      "name": "PUC Robotics Club",
+      "role": "Program Secretary",
+      "period": "Jan 2022 – Dec 2022"
+    },
+    {
+      "name": "Rotaract Club of Chittagong Commercial City",
+      "role": "Member",
+      "period": "Jan 2020 – Dec 2022"
+    }
+  ],
+  "personal_info": {
+    "dob": "Dec 19, 1998",
+    "gender": "Male",
+    "marital_status": "Unmarried",
+    "address": "Chandgaon, Chattogram, 4212",
+    "nationality": "Bangladeshi",
+    "religion": "Islam",
+    "languages": ["English", "Bengali (Fluent)"],
+    "hobbies": ["Travelling", "Reading Books"]
+  }
+}
