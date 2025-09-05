@@ -2,10 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { FiSend } from "react-icons/fi"; 
 import botImage from "../assets/bot.jpg";
 import { Helmet } from "react-helmet";
+import type { ChatMessage } from "../services/ChatApi";
+import { ChatWithAgent } from "../services/ChatApi";
 
 type Message = {
   id: number;
-  sender: "user" | "bot";
+  sender: "user" | "system";
   text: string;
 };
 
@@ -40,7 +42,8 @@ const Chat: React.FC = () => {
     }
   }, [input]);
 
-  const handleSend = () => {
+
+    const handleSend = async () => {
     if (!input.trim()) return;
 
     const userMessage: Message = {
@@ -48,21 +51,44 @@ const Chat: React.FC = () => {
       sender: "user",
       text: input,
     };
-    setMessages((prev) => [...prev, userMessage]);
+
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
     setInput("");
     setLoading(true);
 
-    // Simulate bot response
-    setTimeout(() => {
-      const botMessage: Message = {
+    const history = updatedMessages.map(m => ({
+        role: m.sender === "user" ? "user" : "system",
+        content: m.text
+      }))
+
+    console.log("history >> ", history)
+    console.log("message >> ", input)
+
+    try {
+      const response = await ChatWithAgent(input, history as ChatMessage[]);
+
+      const systemMessage: Message = {
         id: Date.now() + 1,
-        sender: "bot",
-        text: `You said: "${userMessage.text}"`,
+        sender: "system",
+        text: response.reply,
       };
-      setMessages((prev) => [...prev, botMessage]);
+
+      setMessages(prev => [...prev, systemMessage]);
+    } catch (err) {
+      console.error(err);
+      const errorMessage: Message = {
+        id: Date.now() + 2,
+        sender: "system",
+        text: "Failed to get response. Please try again.",
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
   };
+
+
 
   return (
     <> 
