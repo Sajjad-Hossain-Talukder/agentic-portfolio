@@ -1,0 +1,6 @@
+POST  http://localhost:8082/api/v1/push-message
+Content-Type: application/json
+
+{
+  "message": "Hello, this is a test message from the portfolio chatbot backend!"
+}

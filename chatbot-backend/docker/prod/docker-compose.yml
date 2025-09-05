@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  backend:
+    container_name: prod_backend
+    build:
+      context: ../..
+      dockerfile: docker/prod/Dockerfile
+    ports:
+      - "8090:8080"
+    environment:
+      - APP_ENV=production
+    depends_on:
+      - prod_db
+    networks:
+      - prod-network
+  prod_db:
+    container_name: prod_db
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: prod_user
+      POSTGRES_PASSWORD: prod_password
+      POSTGRES_DB: app_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data-prod:/var/lib/postgresql/data
+    networks:
+      - prod-network
+volumes:
+  postgres-data-prod:
+networks:
+  prod-network:
+    driver: bridge

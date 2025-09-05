@@ -1,0 +1,17 @@
+POST http://localhost:8082/api/v1/chat
+Content-Type: application/json
+X-API-Key: sht-RX-AP-G7k2PqX9Lm3Z
+
+{
+  "message": "What kind of projects have you worked on?",
+  "history": [
+    {
+      "role": "user",
+      "content": "Hi, who are you?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm Ed Donner. I can share more about my career and background."
+    }
+  ]
+}
