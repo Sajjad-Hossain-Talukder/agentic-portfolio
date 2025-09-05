@@ -2,7 +2,6 @@ package services
 
 import (
 	"errors"
-	"fmt"
 	"log"
 	"net/http"
 	"net/url"
@@ -13,8 +12,6 @@ func PushService(message, pushoverUser, pushoverToken string) error {
 		log.Println("Pushover credentials are missing!")
 		return errors.New("credentails missing")
 	}
-
-	fmt.Printf("Push: %s\n", message)
 
 	form := url.Values{}
 	form.Add("user", pushoverUser)
@@ -27,7 +24,5 @@ func PushService(message, pushoverUser, pushoverToken string) error {
 		return err
 	}
 	defer resp.Body.Close()
-
-	fmt.Println("Pushover status:", resp.Status)
 	return nil
 }

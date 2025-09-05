@@ -62,8 +62,8 @@ const Chat: React.FC = () => {
         content: m.text
       }))
 
-    console.log("history >> ", history)
-    console.log("message >> ", input)
+    // console.log("history >> ", history)
+    // console.log("message >> ", input)
 
     try {
       const response = await ChatWithAgent(input, history as ChatMessage[]);

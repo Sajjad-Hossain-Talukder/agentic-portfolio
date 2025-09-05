@@ -1,7 +1,6 @@
 package config
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -45,7 +44,6 @@ func LoadConfig(env string, isTesting bool) (*Config, error) {
 	default:
 		log.Fatalf("Unknown environment: %s", env)
 	}
-	fmt.Println(envFile)
 
 	if err := godotenv.Load(envFile); err != nil {
 		return nil, err

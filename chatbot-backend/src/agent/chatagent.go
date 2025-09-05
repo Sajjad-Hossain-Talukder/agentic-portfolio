@@ -172,10 +172,8 @@ func (ca *ChatAgent) Chat(message string, history []ChatMessage) (string, error)
 			Function: t.Function,
 		}
 	}
-	loop := 0 
+
 	 for !done {
-		fmt.Println("Loop : ", loop, messages)
-		loop += 1
         resp, err := ca.Client.CreateChatCompletion(context.Background(), openai.ChatCompletionRequest{
             Model:    ca.ModelName,
             Messages: messages,
@@ -188,27 +186,21 @@ func (ca *ChatAgent) Chat(message string, history []ChatMessage) (string, error)
         choice := resp.Choices[0]
 
 		if choice.FinishReason == openai.FinishReasonToolCalls {
-			fmt.Println("Tool List :: ", choice.Message.ToolCalls  )
 			for _, tool := range choice.Message.ToolCalls {
 				argsJSON := tool.Function.Arguments
 				toolName := tool.Function.Name
-
-				fmt.Println("tool name", toolName)
-				fmt.Println("Args Json", argsJSON)
 			
 				args := make(map[string]string)
 				if err := json.Unmarshal([]byte(argsJSON), &args); err != nil {
 					log.Printf("Failed to parse tool arguments for %s: %v", toolName, err)
 					continue
 				}
-				fmt.Println("Args", args)
 
 				result, err := ca.HandleToolCall(toolName, args)
 				if err != nil {
 					log.Printf("Error executing tool %s: %v", toolName, err)
 					continue 
 				}
-				fmt.Println("Args", result)
 				content := fmt.Sprintf("%v tool call %v", toolName, result[Recorder])
 		
 				messages = append(messages, openai.ChatCompletionMessage{
@@ -216,10 +208,6 @@ func (ca *ChatAgent) Chat(message string, history []ChatMessage) (string, error)
 					Content: content,
 				})
 			}
-
-			fmt.Println("After Tool call :: ", messages )
-
-
 		} else {
 			finalContent = choice.Message.Content
 			done = true
@@ -227,7 +215,6 @@ func (ca *ChatAgent) Chat(message string, history []ChatMessage) (string, error)
     }
 
     return finalContent, nil
-
 }
 
 func (ca *ChatAgent) HandleToolCall(toolName string, args map[string]string) (map[string]string, error) {
